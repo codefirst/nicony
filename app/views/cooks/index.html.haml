@@ -1,0 +1,29 @@
+%h1 Listing cooks
+
+%table
+  %tr
+    %th Host
+    %th Recipe
+    %th User
+    %th Success
+    %th Log
+    %th Memo
+    %th
+    %th
+    %th
+
+  - @cooks.each do |cook|
+    %tr
+      %td= cook.host
+      %td= cook.recipe
+      %td= cook.user
+      %td= cook.success
+      %td= cook.log
+      %td= cook.memo
+      %td= link_to 'Show', cook
+      %td= link_to 'Edit', edit_cook_path(cook)
+      %td= link_to 'Destroy', cook, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Cook', new_cook_path

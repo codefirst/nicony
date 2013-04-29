@@ -1,0 +1,24 @@
+%p#notice= notice
+
+%p
+  %b Host:
+  = @cook.host
+%p
+  %b Recipe:
+  = @cook.recipe
+%p
+  %b User:
+  = @cook.user
+%p
+  %b Success:
+  = @cook.success
+%p
+  %b Log:
+  = @cook.log
+%p
+  %b Memo:
+  = @cook.memo
+
+= link_to 'Edit', edit_cook_path(@cook)
+\|
+= link_to 'Back', cooks_path

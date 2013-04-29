@@ -1,4 +1,6 @@
 Nicony::Application.routes.draw do
+  resources :cooks
+
   resources :recipes
 
   resources :hosts
