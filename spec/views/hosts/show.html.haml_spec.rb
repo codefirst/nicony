@@ -4,7 +4,7 @@ describe "hosts/show" do
   before(:each) do
     @host = assign(:host, stub_model(Host,
       :name => "Name",
-      :ip => "Ip",
+      :address => "Address",
       :user_name => "User Name",
       :password => "Password",
       :description => "MyText"
@@ -15,7 +15,7 @@ describe "hosts/show" do
     render
     # Run the generator again with the --webrat flag if you want to use webrat matchers
     rendered.should match(/Name/)
-    rendered.should match(/Ip/)
+    rendered.should match(/Address/)
     rendered.should match(/User Name/)
     rendered.should match(/Password/)
     rendered.should match(/MyText/)

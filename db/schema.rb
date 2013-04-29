@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 20130429123052) do
 
   create_table "hosts", force: true do |t|
     t.string   "name"
-    t.string   "ip"
+    t.string   "address"
     t.string   "user_name"
     t.string   "password"
     t.text     "description"

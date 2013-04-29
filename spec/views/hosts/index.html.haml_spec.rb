@@ -5,14 +5,14 @@ describe "hosts/index" do
     assign(:hosts, [
       stub_model(Host,
         :name => "Name",
-        :ip => "Ip",
+        :address => "Address",
         :user_name => "User Name",
         :password => "Password",
         :description => "MyText"
       ),
       stub_model(Host,
         :name => "Name",
-        :ip => "Ip",
+        :address => "Address",
         :user_name => "User Name",
         :password => "Password",
         :description => "MyText"
@@ -24,7 +24,7 @@ describe "hosts/index" do
     render
     # Run the generator again with the --webrat flag if you want to use webrat matchers
     assert_select "tr>td", :text => "Name".to_s, :count => 2
-    assert_select "tr>td", :text => "Ip".to_s, :count => 2
+    assert_select "tr>td", :text => "Address".to_s, :count => 2
     assert_select "tr>td", :text => "User Name".to_s, :count => 2
     assert_select "tr>td", :text => "Password".to_s, :count => 2
     assert_select "tr>td", :text => "MyText".to_s, :count => 2

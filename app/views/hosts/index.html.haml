@@ -3,7 +3,7 @@
 %table.table
   %tr
     %th Name
-    %th Ip
+    %th Address
     %th User name
     %th Password
     %th Description
@@ -14,7 +14,7 @@
   - @hosts.each do |host|
     %tr
       %td= host.name
-      %td= host.ip
+      %td= host.address
       %td= host.user_name
       %td= host.password
       %td= host.description
