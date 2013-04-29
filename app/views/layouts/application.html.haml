@@ -13,6 +13,14 @@
     %h1 Nicony
 
    .row
+    .navbar.navbar-inverse
+     .navbar-inner
+      .container
+       %ul.nav
+        %li= link_to 'Hosts', controller: :hosts, action: :index
+        %li= link_to 'Recipes', controller: :recipes, action: :index
+
+   .row
     = yield
 
  = javascript_include_tag "application"
