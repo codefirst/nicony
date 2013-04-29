@@ -10,15 +10,16 @@
  %body
   .container
    .row
-    %h1 Nicony
+    %h1.logo= link_to 'Nicony', root_path
 
    .row
     .navbar.navbar-inverse
      .navbar-inner
       .container
        %ul.nav
-        %li= link_to 'Hosts', controller: :hosts, action: :index
-        %li= link_to 'Recipes', controller: :recipes, action: :index
+        %li= link_to 'Top', root_path
+        %li= link_to 'Hosts', hosts_path
+        %li= link_to 'Recipes', recipes_path
 
    .row
     = yield
