@@ -1,3 +1,12 @@
+# Example:
+#
+#   require 'nicony/mina'
+#   mina = Nicony::Mina.new
+#   mina.set :domain, 'localhost'
+#   mina.task 'hello', 'queue! %[echo hello]'
+#
+#   mina.run 'hello'
+#
 module Nicony
   class Mina
     def initialize
@@ -35,8 +44,7 @@ END
       Tempfile.open('mina') do|io|
         io.write self.text
         io.close
-
-        ret = %x("bundle exec mina -f #{io.path} #{name}")
+        ret = %x(bundle exec mina -f #{io.path} #{name})
       end
       ret
     end
