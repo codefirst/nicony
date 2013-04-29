@@ -12,6 +12,7 @@ module Nicony
     def initialize
       @config = {}
       @tasks  = {}
+      @raw    = ''
     end
 
     def set(name, value)
@@ -20,6 +21,10 @@ module Nicony
 
     def task(name, content)
       @tasks[name] = content
+    end
+
+    def raw=(raw)
+      @raw = raw
     end
 
     def text
@@ -36,14 +41,19 @@ end
 END
       end
 
+      text += @raw
+
       text
     end
 
     def run(name)
       ret = nil
+      Rails.logger.info "runing"
       Tempfile.open('mina') do|io|
         io.write self.text
         io.close
+
+        Rails.logger.info self.text
         ret = %x(bundle exec mina -f #{io.path} #{name})
       end
       ret

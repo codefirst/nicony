@@ -8,21 +8,15 @@
 
   .field
     = f.label :host
-    = f.text_field :host
+    = f.select(:host_id, options_for_select(for_options(@hosts, :name)))
   .field
     = f.label :recipe
-    = f.text_field :recipe
+    = f.select(:recipe_id, options_for_select(for_options(@recipes, :name)))
   .field
     = f.label :user
-    = f.text_area :user
-  .field
-    = f.label :success
-    = f.check_box :success
-  .field
-    = f.label :log
-    = f.text_area :log
+    = f.text_field :user
   .field
     = f.label :memo
     = f.text_area :memo
   .actions
-    = f.submit 'Save'
+    = f.submit 'Run'

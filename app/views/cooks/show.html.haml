@@ -1,11 +1,14 @@
 %p#notice= notice
 
 %p
+  %b Time
+  = @cook.created_at
+%p
   %b Host:
-  = @cook.host
+  = @cook.host.name
 %p
   %b Recipe:
-  = @cook.recipe
+  = @cook.recipe.name
 %p
   %b User:
   = @cook.user
@@ -13,12 +16,9 @@
   %b Success:
   = @cook.success
 %p
-  %b Log:
-  = @cook.log
-%p
   %b Memo:
   = @cook.memo
-
-= link_to 'Edit', edit_cook_path(@cook)
-\|
+%p
+  %b Log:
+  %pre=@cook.log
 = link_to 'Back', cooks_path
