@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @recipe.name
+%p
+  %b Tasks:
+  = @recipe.tasks
+%p
+  %b User:
+  = @recipe.user_id
+%p
+  %b Memo:
+  = @recipe.memo
+
+= link_to 'Edit', edit_recipe_path(@recipe)
+\|
+= link_to 'Back', recipes_path
