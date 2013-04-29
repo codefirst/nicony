@@ -4,7 +4,6 @@ ruby '2.0.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0.beta1'
 
-gem 'sqlite3'
 gem 'haml-rails'
 
 # Gems used only for assets and not required
@@ -19,9 +18,14 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-group :development, :test do
+group :production do
+  gem 'pg'
+end
 
-gem 'jquery-rails'
+group :development, :test do
+  gem 'sqlite3'
+
+  gem 'jquery-rails'
   gem "rspec-rails", ">= 2.11.4"
   gem 'simplecov'
 end
