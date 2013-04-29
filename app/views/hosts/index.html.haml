@@ -1,0 +1,27 @@
+%h1 Listing hosts
+
+%table
+  %tr
+    %th Name
+    %th Ip
+    %th User name
+    %th Password
+    %th Description
+    %th
+    %th
+    %th
+
+  - @hosts.each do |host|
+    %tr
+      %td= host.name
+      %td= host.ip
+      %td= host.user_name
+      %td= host.password
+      %td= host.description
+      %td= link_to 'Show', host
+      %td= link_to 'Edit', edit_host_path(host)
+      %td= link_to 'Destroy', host, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Host', new_host_path
