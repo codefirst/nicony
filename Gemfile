@@ -9,6 +9,8 @@ gem 'thin'
 gem 'jquery-rails'
 gem 'haml-rails'
 
+gem 'mina'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -49,3 +51,4 @@ gem 'jbuilder', '~> 1.0.1'
 
 # To use debugger
 # gem 'debugger'
+#
