@@ -6,27 +6,31 @@ describe Host do
   end
 
   describe 'validates' do
+    it '(if this test fail, CHECK `valid_params`' do
+      Host.create(valid_params).should_not be_validation_error
+    end
+
     describe '.name' do
       it 'should not contain blank' do
-        Host.create(name: '').should be_validation_error
+        Host.create(valid_params.merge(name: '')).should be_validation_error
       end
 
       it 'should not contain nil' do
-        Host.create(name: nil).should be_validation_error
+        Host.create(valid_params.merge(name: nil)).should be_validation_error
       end
     end
 
     describe '.address' do
       it 'should not contain blank' do
-        Host.create(address: '').should be_validation_error
+        Host.create(valid_params.merge(address: '')).should be_validation_error
       end
 
       it 'should not contain nil' do
-        Host.create(address: nil).should be_validation_error
+        Host.create(valid_params.merge(address: nil)).should be_validation_error
       end
 
       it 'should not contain blank' do
-        Host.create(address: 'foo bar baz').should be_validation_error
+        Host.create(valid_params.merge(address: 'foo bar baz')).should be_validation_error
       end
 
       it 'should allow IP address' do
