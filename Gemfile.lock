@@ -43,6 +43,11 @@ GEM
     eventmachine (1.0.3)
     execjs (1.4.0)
       multi_json (~> 1.0)
+    factory_girl (4.2.0)
+      activesupport (>= 3.0.0)
+    factory_girl_rails (4.2.1)
+      factory_girl (~> 4.2.0)
+      railties (>= 3.0.0)
     flatui-rails (0.0.4)
       bootstrap-sass (= 2.2.2)
       railties (>= 3.1)
@@ -149,6 +154,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 4.0.0.beta1)
+  factory_girl_rails (~> 4.0)
   flatui-rails
   haml-rails
   jbuilder (~> 1.0.1)
