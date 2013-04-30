@@ -6,11 +6,11 @@
   = stylesheet_link_tag 'application'
   = csrf_meta_tag
   = favicon_link_tag
-  %title= Nicony
+  %title= format_title(yield :title)
  %body
   .container
    .row
-    %h1.logo= link_to 'Nicony', root_path
+    %h1.logo= link_to image_tag('logo.png', alt: 'Nicony', title: 'Nicony'), root_path
 
    .row
     .navbar.navbar-inverse
