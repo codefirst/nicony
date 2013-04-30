@@ -1,3 +1,9 @@
+GIT
+  remote: git://github.com/sethvargo/bootstrap_forms.git
+  revision: f64ba5391c0abd08f886b87314a2cc80e50897f6
+  specs:
+    bootstrap_forms (3.0.0.rc1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -29,7 +35,6 @@ GEM
     atomic (1.1.8)
     bootstrap-sass (2.2.2.0)
       sass (~> 3.2)
-    bootstrap_forms (2.1.1)
     builder (3.1.4)
     codemirror-rails (0.3.1)
     coffee-rails (4.0.0)
@@ -155,7 +160,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bootstrap_forms
+  bootstrap_forms!
   codemirror-rails
   coffee-rails (~> 4.0.0.beta1)
   factory_girl_rails (~> 4.0)

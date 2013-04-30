@@ -9,7 +9,7 @@ gem 'thin'
 gem 'jquery-rails'
 gem 'haml-rails'
 gem 'flatui-rails'
-gem 'bootstrap_forms'
+gem 'bootstrap_forms', github: 'sethvargo/bootstrap_forms'
 gem 'codemirror-rails'
 
 gem 'mina'
