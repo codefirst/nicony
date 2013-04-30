@@ -12,3 +12,8 @@
  *= require_self
  *= require_tree .
  */
+
+.description {
+  width: 600px;
+  height: 80px;
+}

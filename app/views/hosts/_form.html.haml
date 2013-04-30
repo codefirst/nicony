@@ -1,25 +1,8 @@
-= form_for @host do |f|
-  - if @host.errors.any?
-    #error_explanation
-      %h2= "#{pluralize(@host.errors.count, "error")} prohibited this host from being saved:"
-      %ul
-        - @host.errors.full_messages.each do |msg|
-          %li= msg
-
-  .field
-    = f.label :name
-    = f.text_field :name
-  .field
-    = f.label :address
-    = f.text_field :address
-  .field
-    = f.label :user_name
-    = f.text_field :user_name
-  .field
-    = f.label :password
-    = f.text_field :password
-  .field
-    = f.label :description
-    = f.text_area :description
+= bootstrap_form_for @host, html: { class: 'form-horizontal' } do |f|
+  = f.text_field :name, placeholder: 'DNS'
+  = f.text_field :address, placeholder: '127.0.0.1'
+  = f.text_field :user_name, placeholder: 'root'
+  = f.text_field :password, type: 'password'
+  = f.text_area :description, class: 'description'
   .actions
     = f.submit 'Save', class: 'class: btn btn-large btn-block btn-primary'

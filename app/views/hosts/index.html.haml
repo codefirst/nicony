@@ -1,26 +1,25 @@
-%h2 Listing hosts
+- content_for(:title) { 'Hosts' }
+%h2 All hosts
 
-%table.table
-  %tr
-    %th Name
-    %th Address
-    %th User name
-    %th Password
-    %th Description
-    %th
-    %th
-    %th
-
-  - @hosts.each do |host|
+%table.table.table-striped.table-condensed
+  %thead
     %tr
-      %td= host.name
-      %td= host.address
-      %td= host.user_name
-      %td= host.password
-      %td= host.description
-      %td= link_to 'Show', host
-      %td= link_to 'Edit', edit_host_path(host)
-      %td= link_to 'Destroy', host, :method => :delete, :data => { :confirm => 'Are you sure?' }
+      %th Name
+      %th Address
+      %th User name
+      %th Description
+      %th
+  %tbody
+    - @hosts.each do |host|
+      %tr
+        %td= host.name
+        %td= host.address
+        %td= host.user_name
+        %td= host.description
+        %td
+          =link_to 'Show', host
+          =link_to 'Edit', edit_host_path(host)
+          =link_to 'Destroy', host, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
 

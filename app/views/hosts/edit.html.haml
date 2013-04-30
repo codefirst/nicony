@@ -1,4 +1,5 @@
-%h2 Editing host
+- content_for(:title) { "Edit host: #{@host.name}" }
+%h2 Edit host: #{@host.name}
 
 = render 'form'
 
