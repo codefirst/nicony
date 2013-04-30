@@ -9,6 +9,8 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require flat-ui
+ *= require codemirror
+ *= require codemirror/themes/elegant
  *= require_self
  *= require_tree .
  */
@@ -16,4 +18,14 @@
 .description {
   width: 600px;
   height: 80px;
+}
+
+.tasks {
+  width: 600px;
+  height: 160px;
+}
+
+.CodeMirror {
+  border: 1px solid #CCC;
+  width: 600px;
 }

@@ -13,5 +13,15 @@
 //= require jquery
 //= require jquery_ujs
 //= require flat-ui
+//= require codemirror
+//= require codemirror/modes/ruby
 //= require turbolinks
 //= require_tree .
+$(function() {
+  $(".tasks").each(function(_, e){
+    CodeMirror.fromTextArea(e, {
+      mode: "ruby",
+      lineNumbers: true,
+      theme: 'elegant'} )
+  });
+});

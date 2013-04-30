@@ -1,4 +1,5 @@
-%h2 Editing recipe
+- content_for(:title) { "Edit recipe: #{@recipe.name}" }
+%h2 Edit recipe: #{@recipe.name}
 
 = render 'form'
 

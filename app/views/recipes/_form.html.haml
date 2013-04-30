@@ -1,22 +1,7 @@
-= form_for @recipe do |f|
-  - if @recipe.errors.any?
-    #error_explanation
-      %h2= "#{pluralize(@recipe.errors.count, "error")} prohibited this recipe from being saved:"
-      %ul
-        - @recipe.errors.full_messages.each do |msg|
-          %li= msg
-
-  .field
-    = f.label :name
-    = f.text_field :name
-  .field
-    = f.label :tasks
-    = f.text_area :tasks
-  .field
-    = f.label :user_id
-    = f.number_field :user_id
-  .field
-    = f.label :memo
-    = f.text_area :memo
+= bootstrap_form_for @recipe, html: { class: 'form-horizontal' } do |f|
+  = f.text_field :name, placeholder: 'setup'
+  = f.number_field :user_id
+  = f.text_area :memo, class: 'description', placeholder: 'setup DNS'
+  = f.text_area :tasks, class: 'tasks'
   .actions
     = f.submit 'Save', class: 'class: btn btn-large btn-block btn-primary'

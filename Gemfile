@@ -10,6 +10,7 @@ gem 'jquery-rails'
 gem 'haml-rails'
 gem 'flatui-rails'
 gem 'bootstrap_forms'
+gem 'codemirror-rails'
 
 gem 'mina'
 

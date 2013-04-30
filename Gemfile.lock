@@ -31,6 +31,7 @@ GEM
       sass (~> 3.2)
     bootstrap_forms (2.1.1)
     builder (3.1.4)
+    codemirror-rails (0.3.1)
     coffee-rails (4.0.0)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0.beta, < 5.0)
@@ -155,6 +156,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootstrap_forms
+  codemirror-rails
   coffee-rails (~> 4.0.0.beta1)
   factory_girl_rails (~> 4.0)
   flatui-rails

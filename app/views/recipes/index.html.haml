@@ -1,24 +1,23 @@
-%h2 Listing recipes
+- content_for(:title) { 'All recipes' }
+%h2 All recipes
 
-%table.table
-  %tr
-    %th Name
-    %th Tasks
-    %th User
-    %th Memo
-    %th
-    %th
-    %th
-
-  - @recipes.each do |recipe|
+%table.table.table-striped.table-condensed
+  %thead
     %tr
-      %td= recipe.name
-      %td= recipe.tasks
-      %td= recipe.user_id
-      %td= recipe.memo
-      %td= link_to 'Show', recipe
-      %td= link_to 'Edit', edit_recipe_path(recipe)
-      %td= link_to 'Destroy', recipe, :method => :delete, :data => { :confirm => 'Are you sure?' }
+      %th Name
+      %th Memo
+      %th User
+      %th
+  %tbody
+    - @recipes.each do |recipe|
+      %tr
+        %td= recipe.name
+        %td= recipe.memo
+        %td= recipe.user_id
+        %td
+          = link_to 'Show', recipe
+          = link_to 'Edit', edit_recipe_path(recipe)
+          = link_to 'Destroy', recipe, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
 
