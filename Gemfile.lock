@@ -1,4 +1,14 @@
 GIT
+  remote: git://github.com/pkurek/flatui-rails.git
+  revision: b8f07194c13865cdf21ee4e18058f7661694d4a7
+  ref: b8f07194c13865cdf21ee4e18058f7661694d4a7
+  specs:
+    flatui-rails (0.0.4)
+      bootstrap-sass (>= 2.2.2)
+      railties (>= 3.1)
+      sass-rails (>= 3.2.0)
+
+GIT
   remote: git://github.com/sethvargo/bootstrap_forms.git
   revision: f64ba5391c0abd08f886b87314a2cc80e50897f6
   specs:
@@ -33,7 +43,7 @@ GEM
       tzinfo (~> 0.3.37)
     arel (4.0.0)
     atomic (1.1.8)
-    bootstrap-sass (2.2.2.0)
+    bootstrap-sass (2.3.1.0)
       sass (~> 3.2)
     builder (3.1.4)
     codemirror-rails (0.3.1)
@@ -55,10 +65,6 @@ GEM
     factory_girl_rails (4.2.1)
       factory_girl (~> 4.2.0)
       railties (>= 3.0.0)
-    flatui-rails (0.0.4)
-      bootstrap-sass (= 2.2.2)
-      railties (>= 3.1)
-      sass-rails (>= 3.2.0)
     haml (4.0.2)
       tilt
     haml-rails (0.4)
@@ -160,7 +166,7 @@ DEPENDENCIES
   codemirror-rails
   coffee-rails (~> 4.0.0.beta1)
   factory_girl_rails (~> 4.0)
-  flatui-rails
+  flatui-rails!
   haml-rails
   jbuilder (~> 1.0.1)
   jquery-rails
