@@ -2,6 +2,6 @@
   = f.text_field :name, placeholder: 'setup'
   = f.number_field :user_id
   = f.text_area :memo, class: 'description', placeholder: 'setup DNS'
-  = f.text_area :tasks, class: 'tasks'
+  = f.text_area :tasks, class: 'tasks', required: false
   .actions
-    = f.submit 'Save', class: 'class: btn btn-large btn-block btn-primary'
+    = f.submit 'Save', class: 'btn btn-large btn-block btn-primary'
