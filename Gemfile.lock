@@ -164,7 +164,7 @@ PLATFORMS
 DEPENDENCIES
   bootstrap_forms!
   codemirror-rails
-  coffee-rails (~> 4.0.0.beta1)
+  coffee-rails (~> 4.0.0.rc1)
   factory_girl_rails (~> 4.0)
   flatui-rails!
   haml-rails
@@ -174,7 +174,7 @@ DEPENDENCIES
   pg
   rails (= 4.0.0.rc1)
   rspec-rails (>= 2.11.4)
-  sass-rails (~> 4.0.0.beta1)
+  sass-rails (~> 4.0.0.rc1)
   simplecov
   sqlite3
   thin
