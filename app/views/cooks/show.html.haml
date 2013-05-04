@@ -1,24 +1,24 @@
 %p#notice= notice
 
 %p
-  %b Time
+  %b= Cook.human_attribute_name(:created_at)
   = @cook.created_at
 %p
-  %b Host:
+  %b= Cook.human_attribute_name(:host)
   = @cook.host.name
 %p
-  %b Recipe:
+  %b= Cook.human_attribute_name(:recipe)
   = @cook.recipe.name
 %p
-  %b User:
+  %b= Cook.human_attribute_name(:user)
   = @cook.user
 %p
-  %b Success:
+  %b= Cook.human_attribute_name(:success)
   = @cook.success
 %p
-  %b Memo:
+  %b= Cook.human_attribute_name(:memo)
   = @cook.memo
 %p
-  %b Log:
+  %b= Cook.human_attribute_name(:log)
   %pre=@cook.log
-= link_to 'Back', cooks_path
+= link_to t(:back), cooks_path

@@ -1,13 +1,13 @@
-- content_for(:title) { 'All hosts' }
-%h2 All hosts
+- content_for(:title) { "#{t(:all)} #{Host.model_name.human(count: 2)}" }
+%h2= "#{t(:all)} #{Host.model_name.human(count: 2)}"
 
 %table.table.table-striped.table-condensed
   %thead
     %tr
-      %th Name
-      %th Address
-      %th User name
-      %th Description
+      %th= Host.human_attribute_name(:name)
+      %th= Host.human_attribute_name(:address)
+      %th= Host.human_attribute_name(:user_name)
+      %th= Host.human_attribute_name(:description)
       %th
   %tbody
     - @hosts.each do |host|
@@ -17,10 +17,10 @@
         %td= host.user_name
         %td= host.description
         %td
-          =link_to 'Show', host
-          =link_to 'Edit', edit_host_path(host)
-          =link_to 'Destroy', host, :method => :delete, :data => { :confirm => 'Are you sure?' }
+          =link_to t(:show), host
+          =link_to t(:edit), edit_host_path(host)
+          =link_to t(:destroy), host, :method => :delete, :data => { :confirm => t('are you sure') }
 
 %br
 
-= link_to 'New Host', new_host_path
+= link_to "#{t(:new)} #{Host.model_name.human}", new_host_path

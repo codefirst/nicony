@@ -1,7 +1,7 @@
-%h2 Editing cook
+%h2= "#{t(:edit)} #{Cool.model_name.human}"
 
 = render 'form'
 
-= link_to 'Show', @cook
+= link_to t(:show), @cook
 \|
-= link_to 'Back', cooks_path
+= link_to t(:back), cooks_path

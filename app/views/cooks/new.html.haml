@@ -1,5 +1,5 @@
-%h2 New cook
+%h2=  "#{t(:new)} #{Cook.model_name.human}"
 
 = render 'form'
 
-= link_to 'Back', cooks_path
+= link_to t(:back), cooks_path

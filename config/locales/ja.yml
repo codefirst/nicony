@@ -1,0 +1,44 @@
+en:
+  activerecord:
+    models:
+      cook: Cook
+      host: ホスト
+      recipe: レシピ
+    attributes:
+      cook:
+        host_id: ホスト
+        host: ホスト
+        recipe_id: レシピ
+        recipe: レシピ
+        user: ユーザ
+        success: 成功
+        log: ログ
+        memo: メモ
+        created_at: 作成日時
+      host:
+        name: 名前
+        address: アドレス
+        user_name: ユーザ名
+        password: パスワード
+        description: 説明
+      recipe:
+        name: 名前
+        memo: メモ
+        user: ユーザ
+        user_id: ユーザ
+        tasks: タスク
+
+  top: トップ
+  hosts: ホスト
+  recipes: レシピ
+  all: 全ての
+  new: 新規
+  edit: 編集
+  back: 戻る
+  run: 実行
+  show: 閲覧
+  save: 保存
+  destroy: 削除
+
+  'are you sure': 'よろしいですか?'
+  'all cook results': '全ての実行結果'

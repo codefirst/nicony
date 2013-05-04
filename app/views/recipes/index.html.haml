@@ -1,12 +1,12 @@
-- content_for(:title) { 'All recipes' }
-%h2 All recipes
+- content_for(:title) { "#{t(:all)} #{Recipe.model_name.human(count: 2)}" }
+%h2= "#{t(:all)} #{Recipe.model_name.human(count: 2)}"
 
 %table.table.table-striped.table-condensed
   %thead
     %tr
-      %th Name
-      %th Memo
-      %th User
+      %th= Recipe.human_attribute_name(:name)
+      %th= Recipe.human_attribute_name(:memo)
+      %th= Recipe.human_attribute_name(:user)
       %th
   %tbody
     - @recipes.each do |recipe|
@@ -15,10 +15,10 @@
         %td= recipe.memo
         %td= recipe.user_id
         %td
-          = link_to 'Show', recipe
-          = link_to 'Edit', edit_recipe_path(recipe)
-          = link_to 'Destroy', recipe, :method => :delete, :data => { :confirm => 'Are you sure?' }
+          = link_to t(:show), recipe
+          = link_to t(:edit), edit_recipe_path(recipe)
+          = link_to t(:destroy), recipe, :method => :delete, :data => { :confirm => t('are you sure') }
 
 %br
 
-= link_to 'New Recipe', new_recipe_path
+= link_to "#{t(:new)} #{Recipe.model_name.human}", new_recipe_path

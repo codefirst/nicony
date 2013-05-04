@@ -1,16 +1,16 @@
-- content_for(:title) { 'All cook results' }
-%h2 All cook results
+- content_for(:title) { t('all cook results') }
+%h2= t('all cook results')
 
 %table.table.table-striped.table-condensed
   %thead
     %tr
-      %th Time
-      %th Host
-      %th Recipe
-      %th User
-      %th Success
-      %th Log
-      %th Memo
+      %th= Cook.human_attribute_name(:created_at)
+      %th= Cook.human_attribute_name(:host)
+      %th= Cook.human_attribute_name(:recipe)
+      %th= Cook.human_attribute_name(:user)
+      %th= Cook.human_attribute_name(:success)
+      %th= Cook.human_attribute_name(:log)
+      %th= Cook.human_attribute_name(:memo)
       %th
   %tbody
     - @cooks.each do |cook|
@@ -23,7 +23,7 @@
         %td= cook.log
         %td= cook.memo
         %td
-          = link_to 'Show', cook
-          = link_to 'Destroy', cook, :method => :delete, :data => { :confirm => 'Are you sure?' }
+          = link_to t(:show), cook
+          = link_to t(:destroy), cook, :method => :delete, :data => { :confirm => t('are you sure') }
 
-= link_to 'New Cook', new_cook_path
+= link_to "#{t(:new)} #{Cook.model_name.human}", new_cook_path

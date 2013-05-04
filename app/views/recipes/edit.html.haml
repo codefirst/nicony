@@ -1,8 +1,8 @@
-- content_for(:title) { "Edit recipe: #{@recipe.name}" }
-%h2 Edit recipe: #{@recipe.name}
+- content_for(:title) { "#{t(:edit)} #{Recipe.model_name.human}: #{@recipe.name}" }
+%h2= "#{t(:edit)} #{Recipe.model_name.human}: #{@recipe.name}"
 
 = render 'form'
 
-= link_to 'Show', @recipe
+= link_to t(:show), @recipe
 \|
-= link_to 'Back', recipes_path
+= link_to t(:back), recipes_path

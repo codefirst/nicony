@@ -1,21 +1,21 @@
 %p#notice= notice
 
 %p
-  %b Name:
+  %b= Host.human_attribute_name(:name)
   = @host.name
 %p
-  %b Address:
+  %b= Host.human_attribute_name(:address)
   = @host.address
 %p
-  %b User name:
+  %b= Host.human_attribute_name(:user_name)
   = @host.user_name
 %p
-  %b Password:
+  %b= Host.human_attribute_name(:password)
   ****
 %p
-  %b Description:
+  %b= Host.human_attribute_name(:description)
   = @host.description
 
-= link_to 'Edit', edit_host_path(@host)
+= link_to t(:edit), edit_host_path(@host)
 \|
-= link_to 'Back', hosts_path
+= link_to t(:back), hosts_path
