@@ -32,7 +32,7 @@ Precompile assets:
 
 Setup database:
 
-    $ bundle exec db:migrate RAILS_ENV=production
+    $ bundle exec rake db:migrate RAILS_ENV=production
 
 Run:
 
