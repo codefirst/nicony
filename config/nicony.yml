@@ -1,0 +1,1 @@
+password_encryption_secret_key: <%= ENV['PASSWORD_ENCRYPTION_SECRET_KEY'] || '1bb3d19f484c4e3b905896a1fa773afd' %>

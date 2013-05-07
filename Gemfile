@@ -12,6 +12,7 @@ gem 'flatui-rails', :github => 'pkurek/flatui-rails', :ref => 'b8f07194c13865cdf
 gem 'bootstrap_forms', github: 'sethvargo/bootstrap_forms'
 gem 'codemirror-rails'
 gem 'attr_encrypted'
+gem 'settingslogic'
 
 gem 'mina'
 
