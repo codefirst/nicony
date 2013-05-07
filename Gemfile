@@ -11,6 +11,7 @@ gem 'haml-rails'
 gem 'flatui-rails', :github => 'pkurek/flatui-rails', :ref => 'b8f07194c13865cdf21ee4e18058f7661694d4a7'
 gem 'bootstrap_forms', github: 'sethvargo/bootstrap_forms'
 gem 'codemirror-rails'
+gem 'attr_encrypted'
 
 gem 'mina'
 

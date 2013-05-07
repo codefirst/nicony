@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130429134408) do
+ActiveRecord::Schema.define(version: 20130507133600) do
 
   create_table "cooks", force: true do |t|
     t.integer  "host_id"
@@ -31,10 +31,10 @@ ActiveRecord::Schema.define(version: 20130429134408) do
     t.string   "name"
     t.string   "address"
     t.string   "user_name"
-    t.string   "password"
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "encrypted_password"
   end
 
   create_table "recipes", force: true do |t|
