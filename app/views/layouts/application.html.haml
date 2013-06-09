@@ -20,6 +20,8 @@
         %li= link_to t(:top), root_path
         %li= link_to t(:hosts), hosts_path
         %li= link_to t(:recipes), recipes_path
+        - if user_signed_in?
+         %li= link_to t(:logout), destroy_user_session_path
 
    .row
     = yield

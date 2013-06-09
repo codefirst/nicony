@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130507133600) do
+ActiveRecord::Schema.define(version: 20130608151233) do
 
   create_table "cooks", force: true do |t|
     t.integer  "host_id"
@@ -42,6 +42,13 @@ ActiveRecord::Schema.define(version: 20130507133600) do
     t.text     "tasks"
     t.integer  "user_id"
     t.text     "memo"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", force: true do |t|
+    t.string   "name",       null: false
+    t.string   "nickname",   null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

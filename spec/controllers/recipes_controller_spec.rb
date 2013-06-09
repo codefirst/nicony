@@ -30,6 +30,12 @@ describe RecipesController do
   # RecipesController. Be sure to keep this updated too.
   let(:valid_session) { {} }
 
+  before do
+    user = User.new(name: 'name', nickname: 'nickname')
+    user.save
+    sign_in user
+  end
+
   describe "GET index" do
     it "assigns all recipes as @recipes" do
       recipe = Recipe.create! valid_attributes

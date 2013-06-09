@@ -13,6 +13,9 @@ gem 'bootstrap_forms', github: 'sethvargo/bootstrap_forms'
 gem 'codemirror-rails'
 gem 'attr_encrypted'
 gem 'settingslogic'
+gem 'devise', github: 'plataformatec/devise', branch: 'rails4'
+gem 'omniauth'
+gem 'omniauth-github'
 
 gem 'mina'
 

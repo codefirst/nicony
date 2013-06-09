@@ -34,6 +34,8 @@ Setup database:
 
     $ bundle exec rake db:migrate RAILS_ENV=production
 
+Edit omniauth section in config/nicony.yml:
+
 Run:
 
     $ bundle exec rails s -e production
