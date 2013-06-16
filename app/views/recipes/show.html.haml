@@ -6,7 +6,7 @@
   = @recipe.name
 %p
   %b= Recipe.human_attribute_name(:user_id)
-  = @recipe.user_id
+  = @recipe.user.name if @recipe.user
 %p
   %b= Recipe.human_attribute_name(:memo)
   = @recipe.memo

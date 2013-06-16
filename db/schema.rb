@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20130608151233) do
   create_table "cooks", force: true do |t|
     t.integer  "host_id"
     t.integer  "recipe_id"
-    t.text     "user"
+    t.integer  "user_id"
     t.boolean  "success"
     t.text     "log"
     t.text     "memo"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 20130608151233) do
 
   add_index "cooks", ["host_id"], name: "index_cooks_on_host_id"
   add_index "cooks", ["recipe_id"], name: "index_cooks_on_recipe_id"
+  add_index "cooks", ["user_id"], name: "index_cooks_on_user_id"
 
   create_table "hosts", force: true do |t|
     t.string   "name"
@@ -45,6 +46,8 @@ ActiveRecord::Schema.define(version: 20130608151233) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "recipes", ["user_id"], name: "index_recipes_on_user_id"
 
   create_table "users", force: true do |t|
     t.string   "name",       null: false

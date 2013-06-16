@@ -3,7 +3,7 @@ class CreateRecipes < ActiveRecord::Migration
     create_table :recipes do |t|
       t.string :name
       t.text :tasks
-      t.integer :user_id
+      t.references :user, index: true
       t.text :memo
 
       t.timestamps

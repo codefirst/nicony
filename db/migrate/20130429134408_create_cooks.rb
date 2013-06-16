@@ -3,7 +3,7 @@ class CreateCooks < ActiveRecord::Migration
     create_table :cooks do |t|
       t.references :host, index: true
       t.references :recipe, index: true
-      t.text :user
+      t.references :user, index: true
       t.boolean :success
       t.text :log
       t.text :memo

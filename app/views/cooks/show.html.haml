@@ -11,7 +11,7 @@
   = @cook.recipe.name
 %p
   %b= Cook.human_attribute_name(:user)
-  = @cook.user
+  = @cook.user.name if @cook.user
 %p
   %b= Cook.human_attribute_name(:success)
   = @cook.success

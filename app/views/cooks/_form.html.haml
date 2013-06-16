@@ -1,7 +1,6 @@
 = bootstrap_form_for @cook, html: { class: 'form-horizontal' } do |f|
   = f.select(:host_id, options_for_select(for_options(@hosts, :name)))
   = f.select(:recipe_id, options_for_select(for_options(@recipes, :name)))
-  = f.text_field :user
   = f.text_area :memo, class: 'description'
   .actions
     = f.submit t(:run), class: 'btn btn-large btn-block btn-primary'

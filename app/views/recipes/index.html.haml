@@ -13,7 +13,7 @@
       %tr
         %td= recipe.name
         %td= recipe.memo
-        %td= recipe.user_id
+        %td= recipe.user.name if recipe.user
         %td
           = link_to t(:show), recipe
           = link_to t(:edit), edit_recipe_path(recipe)

@@ -4,7 +4,7 @@ class CooksController < ApplicationController
   # GET /cooks
   # GET /cooks.json
   def index
-    @cooks = Cook.all
+    @cooks = Cook.includes(:user)
   end
 
   # GET /cooks/1
@@ -22,7 +22,7 @@ class CooksController < ApplicationController
   # POST /cooks
   # POST /cooks.json
   def create
-    @cook = Cook.new(cook_params)
+    @cook = Cook.new(cook_params.merge(user_id: current_user.id))
     @cook.log = cook @cook
 
     respond_to do |format|
@@ -54,7 +54,7 @@ class CooksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def cook_params
-      params.require(:cook).permit(:host_id, :recipe_id, :user, :success, :log, :memo)
+      params.require(:cook).permit(:host_id, :recipe_id, :user_id, :success, :log, :memo)
     end
 
     def cook(c)

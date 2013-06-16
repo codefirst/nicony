@@ -1,6 +1,5 @@
 = bootstrap_form_for @recipe, html: { class: 'form-horizontal' } do |f|
   = f.text_field :name, placeholder: 'setup'
-  = f.number_field :user_id
   = f.text_area :memo, class: 'description', placeholder: 'setup DNS'
   = f.text_area :tasks, class: 'tasks', required: false
   .actions

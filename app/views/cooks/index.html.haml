@@ -18,7 +18,7 @@
         %td= cook.created_at
         %td= cook.host.name
         %td= cook.recipe.name
-        %td= cook.user
+        %td= cook.user.name if cook.user
         %td= cook.success
         %td= cook.log
         %td= cook.memo
