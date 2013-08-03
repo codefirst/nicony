@@ -9,7 +9,6 @@
       %th= Cook.human_attribute_name(:recipe)
       %th= Cook.human_attribute_name(:user)
       %th= Cook.human_attribute_name(:success)
-      %th= Cook.human_attribute_name(:log)
       %th= Cook.human_attribute_name(:memo)
       %th
   %tbody
@@ -20,7 +19,6 @@
         %td= cook.recipe.name
         %td= cook.user.name if cook.user
         %td= cook.success
-        %td= cook.log
         %td= cook.memo
         %td
           = link_to t(:show), cook
