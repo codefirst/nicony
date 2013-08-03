@@ -9,7 +9,7 @@
   = @recipe.user.name if @recipe.user
 %p
   %b= Recipe.human_attribute_name(:memo)
-  = @recipe.memo
+  %pre= @recipe.memo
 %p
   %b= Recipe.human_attribute_name(:tasks)
   %pre= @recipe.tasks

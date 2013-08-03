@@ -14,7 +14,7 @@
   ****
 %p
   %b= Host.human_attribute_name(:description)
-  = @host.description
+  %pre= @host.description
 
 = link_to t(:edit), edit_host_path(@host)
 \|
